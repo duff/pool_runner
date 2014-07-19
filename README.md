@@ -5,33 +5,33 @@ Run a list of functions concurrently allowing one to specify the maximum number 
 running at one time.
 
 
-# Rationale
+## Motivation
 
-I've had 2 cases already where I had a list of a few hundred independent long running operations
+I've had  cases where I had a list of a few hundred independent long running operations
 that needed to happen.  In each of the cases, the operations couldn't all happen at once since they
-depended on a finite set of resources.  Having 8 or so of them happen at once though is a huge
-performance boost.
+depended on a finite set of resources.  Having 8 or so of them happen at once though can be a
+significant performance boost.
 
 
-# Philosophy
+## Philosophy
 
 I'm not sure this is the best way to go about this.  It's using
 [poolboy](https://github.com/devinus/poolboy) under the covers to manage the pool of processes.
 
 
-# Installation / Dependency
+## Installation / Dependency
 
 ``` elixir
 { :pool_runner, git: "https://github.com/duff/pool_runner"}
 ```
 
 
-# Usage
+## Usage
 
 
 There's only one function (`PoolRunner.run/2`).  You specify the maximum number of functions
 that should be running at a time.  And you specify the list of functions to be run.  It will
-immediately launch `worker_count` workers.  When a function completes, another one will be
+immediately launch `worker_count` workers.  When a function completes, another one will immediately
 run.
 
 ``` elixir
