@@ -1,0 +1,1 @@
+%{"poolboy": {:git, "https://github.com/devinus/poolboy", "91cf587b6029be696679a4788905de796ec89df3", []}}
