@@ -15,10 +15,14 @@ significant performance boost.
 
 ## Philosophy
 
-I'm not sure this is the best way to go about this.  It's using
-[poolboy](https://github.com/devinus/poolboy) under the covers to manage the pool of processes.
+I'm not sure this is the best way to go about this.  It's really an experiment at this point.  It's
+using [poolboy](https://github.com/devinus/poolboy) under the covers to manage the pool of processes.
 
-I'm also experimenting with a somewhat different approach in [exeque](https://github.com/duff/exeque).
+It's not yet working for longer running processes (more than 5 seconds).  I haven't yet figured out
+how poolboy timeouts work.
+
+I'm now thinking that [exeque](https://github.com/duff/exeque) is a better approach to take for
+this problem.
 
 
 ## Installation / Dependency
