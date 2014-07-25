@@ -18,6 +18,8 @@ significant performance boost.
 I'm not sure this is the best way to go about this.  It's using
 [poolboy](https://github.com/devinus/poolboy) under the covers to manage the pool of processes.
 
+I'm also experimenting with a somewhat different approach in [exeque](https://github.com/duff/exeque).
+
 
 ## Installation / Dependency
 
